@@ -7,10 +7,17 @@ import Ruchka_normal from '../Photo/ruchka_normal.svg'
 import Ruchka_hover from '../Photo/ruchka_hover.svg'
 import Copm_normal from '../Photo/Comp_normal.svg'
 import Copm_hover from '../Photo/Comp_hover.svg'
+import Tel_normal from '../Photo/Tel_normal.svg'
+import Tel_hover from '../Photo/Tel_hover.svg'
+import Gorod_normal from '../Photo/gorod_normal.svg'
+import Gorod_hover from '../Photo/gorod_hover.svg'
+import Stata_normal from '../Photo/stata_normal.svg'
+import Stata_hover from '../Photo/stata_hover.svg'
 const Korobka = styled.div`
     
 `
 const ImageContainer = styled.div`
+margin-top:44px;
   position: relative;
   width: 150px;
   height: 150px;
@@ -59,13 +66,32 @@ display: flex;
     font-weight: lighter;
     }
 `
+const Cartochki2 = styled.div`
+display: flex;
+  flex-direction: row;
+  max-width: 5000px;
+  margin: 0 auto;
+  padding: 20px;
+    h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    }
+    h2{
+    margin-top: 16px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    font-weight: lighter;
+    }
+`
 
 const Card1 = styled.div`
 display: flex;
 flex:1;
-min-width: 0;
 justify-content: space-between;
-width: 300px;
+width: 200px;
 flex-direction: column;
 border-radius: 18px;
 padding: 20px;
@@ -96,6 +122,24 @@ outline:none;
         opacity:0;
     }
     .comp-hover{
+        opacity:1;
+    }
+    .tel-normal{
+        opacity:0;
+    }
+    .tel-hover{
+        opacity:1;
+    }
+    .gorod-normal{
+        opacity:0;
+    }
+    .gorod-hover{
+        opacity:1;
+    }
+    .stata-normal{
+        opacity:0;
+    }
+    .stata-hover{
         opacity:1;
     }
 }
@@ -200,6 +244,53 @@ const Ourservice = () => {
             <ArrowRightButton><Bimg src={Strelka}/></ArrowRightButton>
         </Card1>
     </Cartochki1>
+    <Cartochki2>
+        <Card1>
+        <ImageContainer>
+            <NormalImage src={Tel_normal}
+            alt="Tel Normal" 
+            className="tel-normal"
+            />
+            <HoverImage src={Tel_hover}
+            alt="Tel Hover" 
+            className="tel-hover" 
+            />
+        </ImageContainer>
+            <CardTitle>App Development</CardTitle>
+            <CardD>We help develop company<br></br> mobile apps to be more<br></br> professional and attractive</CardD>
+            <ArrowRightButton><Bimg src={Strelka}/></ArrowRightButton>
+        </Card1>
+        <Card1>
+        <ImageContainer>
+            <NormalImage src={Gorod_normal}
+            alt="Gorod Normal" 
+            className="gorod-normal"
+            />
+            <HoverImage src={Gorod_hover}
+            alt="Gorod Hover" 
+            className="gorod-hover" 
+            />
+        </ImageContainer>
+            <CardTitle>Business Growth</CardTitle>
+            <CardD>We also provide services by<br></br> providing input for your<br></br> business growth</CardD>
+            <ArrowRightButton><Bimg src={Strelka}/></ArrowRightButton>
+        </Card1>
+        <Card1>
+        <ImageContainer>
+            <NormalImage src={Stata_normal}
+            alt="Stata Normal" 
+            className="stata-normal"
+            />
+            <HoverImage src={Stata_hover}
+            alt="Stata Hover" 
+            className="stata-hover" 
+            />
+        </ImageContainer>
+            <CardTitle>Digital marketing</CardTitle>
+            <CardD>We also help you market your<br></br> products trough an online<br></br> marketplace</CardD>
+            <ArrowRightButton><Bimg src={Strelka}/></ArrowRightButton>
+        </Card1>
+    </Cartochki2>
     </Korobka>
 
   )

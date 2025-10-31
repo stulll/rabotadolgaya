@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import MainPage from './Pages/MainPage'
 import Ourservice from './Pages/Ourservice'
-
+import Customersat from './Pages/Customersat'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -9,6 +9,7 @@ function App() {
         <div>
         <MainPage/>
         <Ourservice/>
+        <Customersat/>
       </div>
       
   )
